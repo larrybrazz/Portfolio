@@ -20,14 +20,14 @@ const Header = () => {
     
   return (
   <div className=' shadow-md w-full fixed top-0 left-0 '>
-      <div className='md:flex items-center justify-between bg-black py-4 md:px-10 px-7'>
-      <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
+      <div className='flex items-center justify-between bg-black py-4 md:px-10 px-7'>
+      <div className='font-bold text-2xl cursor-pointer  font-[Poppins] 
       text-gray-600'>
         LarryBrazz
       </div>
       
-      <div onClick={()=>setOpen(!open)} className='text-gray-400 text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
-      <AiOutlineMenu subject={open ? 'close':'menu'}/>
+      <div onClick={()=>setOpen(!open)} className='text-gray-400 text-3xl flex items-center cursor-pointer md:hidden'>
+      <span><i className={`fa fa-bars ${open? "close" : "menu"}`}/></span>
       </div> 
 
       <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-black md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ':'top-[-490px]'}`}>
